@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="41dp"
+        android:ems="10"
+        android:hint="Enter number1"
+        android:inputType="number"
+        android:onClick="enterText1"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="@+id/editTextText2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="29dp"
+        android:ems="10"
+        android:hint="Enter number2"
+        android:inputType="number"
+        android:onClick="enterText2"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="207dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="233dp"
+        android:onClick="resultText"
+        android:text="Result ="
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="233dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText2">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="53dp"
+            android:layout_height="54dp"
+            android:onClick="min"
+            android:text="-"
+            android:textColorHint="#000000"
+            app:backgroundTint="#FF0202" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="53dp"
+            android:layout_height="54dp"
+            android:onClick="sum"
+            android:text="+"
+            app:backgroundTint="#3F51B5" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="53dp"
+            android:layout_height="54dp"
+            android:onClick="multiply"
+            android:text="*"
+            app:backgroundTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="53dp"
+            android:layout_height="54dp"
+            android:onClick="divide"
+            android:text="/"
+            app:backgroundTint="#FFEB3B" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="120dp"
+        android:onClick="dateText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="23dp"
+        android:onClick="dateButton"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
